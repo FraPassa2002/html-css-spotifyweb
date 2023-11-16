@@ -1,0 +1,205 @@
+@import url("./reset.css");
+
+/* 
+    GENERAL
+*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* 
+    ASIDE
+*/
+aside {
+    height: calc(100% - 15vh);
+    width: 200px;
+    background-color: green;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+aside .my-col {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.aside-top > div {
+    width: 100%;
+}
+
+.aside-top > div > img{
+    width: 100%;
+}
+
+aside li {
+    margin: 20px 0;
+}
+
+aside .playlist {
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+aside .playlist > :first-child {
+    margin-bottom: 20px;
+}
+
+.border {
+    /* border-bottom: 2px solid var(--font-color-light); */
+}
+
+/* 
+    MAIN
+*/
+main {
+    background-color: var(--back-color);
+}
+
+
+.general-padding-son > * {
+    padding: 10px;
+}
+
+.general-padding {
+    padding: 10px;
+}
+
+.general-margin-son > * {
+    margin: 10px;
+}
+
+.general-margin {
+    margin: 10px;
+}
+
+
+
+
+
+/* 
+    FOOTER
+*/
+
+footer {
+    background-color: var(--bar-color);
+    width: 100%;
+    height: 15vh;
+
+    position: sticky;
+    left: 0;
+    bottom: 0;
+}
+
+
+.my-player-bar .container .my-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+    width: 100%;
+    
+}
+
+.my-player-bar .my-row > *:not(:nth-child(2)){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#song > div:nth-child(2) {
+    padding-right: 40px;
+
+}
+
+#track {
+    width: 50%
+}
+
+#track > * {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.bottom-bar {
+    width: 100%
+}
+
+.gray-bar {
+    width: calc((100% / 2) - 10px);
+}
+
+.white-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--font-color-light);
+    
+}
+
+input {
+    width: 100%;
+    --litters-range:cursor%;
+    appearance: none;
+    outline: none;
+    height: 1px;
+    border-radius: 20px ;
+    background: linear-gradient( to right, white var(--litters-range), rgba(87, 87, 87, 0.46) var(--litters-range));
+  }
+  
+  input::-webkit-slider-thumb {
+    cursor:none;
+    appearance:none;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+  }
+
+
+
+
+/* 
+    DEBUG
+*/
+
+
+
+/*
+    MEDIA QUERY
+*/
+
+/* DESKTOP S*/
+@media screen and (max-width: 1100px) {
+    
+
+}
+
+/* TABLET */
+@media screen and (max-width: 700px) {
+
+    
+}
+
+/* TABLET S */
+@media screen and (max-width: 600px) {
+
+    
+}
+

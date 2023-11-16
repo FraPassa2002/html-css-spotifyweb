@@ -1,0 +1,25 @@
+/* 
+    RESET
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+:root {
+    --bar-color: #282828;
+    --aside-color-: black;
+    --spotify-color: #ADFF2F;
+    --back-color: #141922;
+    --white-color : white;
+    --font-color-light: #7D7F84;
+}
