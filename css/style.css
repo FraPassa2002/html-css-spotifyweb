@@ -13,6 +13,26 @@ p {
     font-size: small;
 }
 
+.general-padding{
+    padding: 10px;
+}
+.general-margin{
+    margin: 10px;
+}
+.general-padding-son > *{
+    padding: 10px;
+}
+.general-margin-son > *{
+    margin: 10px;
+}
+
+.lateral-margin {
+    margin: 0 10px;
+}
+
+.fa-xl {
+    font-size: 1.9em;
+}
 
 
 /*
@@ -151,6 +171,77 @@ footer {
     right: 0;
 }
 
+.img-song {
+    width: 10vh;
+}
+
+
+.my-player-bar .container .my-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15vh;
+}
+
+.my-player-bar .my-row > *:not(:nth-child(2)){
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#song > div:nth-child(2) {
+    padding-right: 40px;
+
+}
+
+#track {
+    width: 50%
+}
+
+#track > * {
+    display: flex;
+    justify-content: center;
+
+}
+
+.bottom-bar {
+    width: 100%
+}
+
+.bottom-bar div a {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.gray-bar {
+    width: calc((100% / 2) - 10px);
+}
+
+.white-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--font-color-light);
+
+}
+
+input {
+    width: 100%;
+    --litters-range:cursor%;
+    /* appearance: none; */
+    outline: none;
+    height: 1px;
+    border-radius: 20px ;
+    background: linear-gradient( to right, white var(--litters-range), rgba(87, 87, 87, 0.46) var(--litters-range));
+    accent-color: white;
+}
+
+input:hover::-webkit-slider-thumb {
+    outline: 3px solid #bfff31;
+    outline-offset: 0.125rem;
+    border-radius: 50%;
+}
+
+
 
 /*
     DEBUG
@@ -189,6 +280,10 @@ main {
 
 footer {
     background-color: lightseagreen;
+}
+
+.my-player-bar{
+    background-color: blue;
 }
 
 
