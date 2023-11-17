@@ -1,205 +1,195 @@
 @import url("./reset.css");
 
-/* 
+/*
     GENERAL
 */
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+#wrapper {
+    height: calc(100vh - 100px);
+    display: flex;
 }
 
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
+p {
+    color: var(--font-color-light);
+    font-size: small;
 }
 
 
-/* 
+
+/*
     ASIDE
 */
 aside {
-    height: calc(100% - 15vh);
     width: 200px;
-    background-color: green;
+    height: 100%;
 
     position: fixed;
     top: 0;
     left: 0;
 }
 
-aside .my-col {
-    width: 100%;
-    height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.aside-top > div {
-    width: 100%;
-}
-
-.aside-top > div > img{
-    width: 100%;
-}
-
-aside li {
-    margin: 20px 0;
-}
-
-aside .playlist {
-    margin-top: 40px;
-    margin-bottom: 50px;
-}
-
-aside .playlist > :first-child {
-    margin-bottom: 20px;
-}
-
-.border {
-    /* border-bottom: 2px solid var(--font-color-light); */
-}
-
-/* 
+/*
     MAIN
 */
 main {
-    background-color: var(--back-color);
+    width: calc(100% - 200px);
+    height: 100%;
+    margin-left: 200px;
 }
 
+/* header */
+header {
+    width: calc(100% - 200px);
+    height: 80px;
+    background-color: rgba(0, 0,0, 0.5);
+    z-index: 1;
 
-.general-padding-son > * {
-    padding: 10px;
-}
+    position: fixed;
+    top: 0;
+    right: 0;
 
-.general-padding {
-    padding: 10px;
-}
-
-.general-margin-son > * {
-    margin: 10px;
-}
-
-.general-margin {
-    margin: 10px;
-}
-
-
-
-
-
-/* 
-    FOOTER
-*/
-
-footer {
-    background-color: var(--bar-color);
-    width: 100%;
-    height: 15vh;
-
-    position: sticky;
-    left: 0;
-    bottom: 0;
-}
-
-
-.my-player-bar .container .my-row {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 15vh;
-    width: 100%;
-    
-}
-
-.my-player-bar .my-row > *:not(:nth-child(2)){
-    display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 
-#song > div:nth-child(2) {
-    padding-right: 40px;
+header .button {
+    padding: 10px;
+    border: 2px solid white;
+    background-color: rgba(0, 0,0, 0.5);
+    border-radius: 20px 20px;
 
+    margin-right: 30px;
 }
 
-#track {
-    width: 50%
+/* content */
+#content {
+    padding: 80px 15px 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
 }
 
-#track > * {
+#content nav {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#content nav ul {
     display: flex;
     justify-content: center;
-    
 }
 
-.bottom-bar {
-    width: 100%
+#content nav ul li{
+    margin: 0 10px
 }
 
-.gray-bar {
-    width: calc((100% / 2) - 10px);
-}
-
-.white-bar {
+.container-content {
     width: 100%;
-    height: 3px;
-    background-color: var(--font-color-light);
-    
 }
 
-input {
+.container-content >.my-row {
+    margin: 20px -10px;
+}
+
+.container-content .my-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-content .my-row .card{
+    margin: 0 10px;
+    width: calc((100% / 6) - 20px);
+}
+
+.container-content .my-row .card .img-box{
+    position: relative;
+}
+
+.container-content .my-row .card .img-box img{
     width: 100%;
-    --litters-range:cursor%;
-    appearance: none;
-    outline: none;
-    height: 1px;
-    border-radius: 20px ;
-    background: linear-gradient( to right, white var(--litters-range), rgba(87, 87, 87, 0.46) var(--litters-range));
-  }
-  
-  input::-webkit-slider-thumb {
-    cursor:none;
-    appearance:none;
-    width: 10px;
-    height: 10px;
-    background: white;
+}
+
+.container-content .my-row .card .img-box .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0, 0,0, 0.5);
+    
+    width: 100%;
+    height: 100%;
+    display: none;
+    color: white;
+    font-size: 50px;
+    text-shadow: 4px 4px black;
+}
+
+.container-content .my-row .card .img-box:hover .overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-content .my-row .card > * {
+    text-align: center;
+}
+
+.artists > * {
     border-radius: 50%;
-  }
+}
 
 
+/*
+    FOOTER
+*/
+footer {
+    height: 100px;
+    width: 100%;
+
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
 
 
-/* 
+/*
     DEBUG
 */
 
 
 
-/*
-    MEDIA QUERY
-*/
-
-/* DESKTOP S*/
-@media screen and (max-width: 1100px) {
-    
-
+#wrapper {
+    background-color:coral;
 }
 
-/* TABLET */
-@media screen and (max-width: 700px) {
-
-    
+aside {
+    background-color: navy;
 }
 
-/* TABLET S */
-@media screen and (max-width: 600px) {
 
-    
+main {
+    background-color: crimson;
 }
+
+/* header {
+    background-color: darkslategray;
+} */
+
+#content {
+    background-color: darkorchid;
+}
+
+.container-content{
+    background-color: goldenrod;
+}
+
+.card{
+    background-color: aqua;
+}
+
+footer {
+    background-color: lightseagreen;
+}
+
+
 
