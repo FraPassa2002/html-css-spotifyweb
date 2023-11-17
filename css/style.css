@@ -40,12 +40,104 @@ p {
 */
 aside {
     width: 200px;
-    height: 100%;
+    height: calc(100% - 100px);
+    overflow: auto;
+    background-color: var(--aside-color);
 
     position: fixed;
     top: 0;
     left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+
+aside .padding-content {
+    padding-left: 15px;
+    padding-bottom: 8px;
+} 
+
+aside .padding-content-son > * {
+    padding-left: 15px;
+    padding-bottom: 8px;
+} 
+
+
+
+aside p {
+    font-size: 15px;
+}
+
+aside .margin-box {
+    margin-bottom: 30px;
+} 
+
+aside .aside-top .margin-box .border-selection:hover {
+    border-left: 4px solid var(--spotify-color);
+} 
+
+aside .border-selection:hover > * > * {
+    color: white;
+    font-weight: bold;
+}
+
+aside .border-selection:hover > * > * {
+    color: white;
+    font-weight: bold;
+}
+
+aside .aside-top .img-box {
+    width: 160px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-left: 12px;
+    
+}
+
+.square-container {
+    background-color: red;
+    width: calc(100% -15px);
+    height: 100%;
+    /* margin-left: 15px;
+    margin-top: 10px; */
+
+    display: flex;
+    align-items: center;
+}
+
+.square-box {
+    background-color: green;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.aside-bottom p:first-of-type {
+    border-bottom: 2px solid var(--font-color-light);
+}
+
+aside .aside-bottom a .img-box {
+    background-color: var(--font-color-light);
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 20%;
+}
+
+aside .aside-bottom .profile-container {
+    display: flex;
+    align-items: center;
+}
+
+aside .aside-bottom a .img-box img {
+    border-radius: 50%;
+}
+
 
 
 /*
@@ -101,7 +193,12 @@ header .button {
 }
 
 #content nav ul li{
-    margin: 0 10px
+    margin: 0 10px;
+}
+
+#content nav ul li:hover{
+    border-bottom: 3px solid var(--spotify-color);
+    font-weight: bold;
 }
 
 .container-content {
