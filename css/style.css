@@ -42,7 +42,7 @@ aside {
     width: 200px;
     height: calc(100% - 100px);
     overflow: auto;
-    background-color: var(--aside-color);
+    background-color:black;
 
     position: fixed;
     top: 0;
@@ -97,7 +97,6 @@ aside .aside-top .img-box {
 }
 
 .square-container {
-    background-color: red;
     width: calc(100% -15px);
     height: 100%;
     /* margin-left: 15px;
@@ -108,13 +107,26 @@ aside .aside-top .img-box {
 }
 
 .square-box {
-    background-color: green;
+    background-color: var(--font-color-light);
     width: 40px;
     height: 40px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.square-box > *{
+    color: black;   
+}
+
+.square-container:hover .square-box{
+    background-color: white;
+}
+
+.square-container:hover p{
+    color: white;
+    font-weight: bold;
 }
 
 
@@ -126,7 +138,7 @@ aside .aside-bottom a .img-box {
     background-color: var(--font-color-light);
     border: 1px solid white;
     border-radius: 50%;
-    width: 20%;
+    width: calc(50% - 55px);
 }
 
 aside .aside-bottom .profile-container {
@@ -147,6 +159,7 @@ main {
     width: calc(100% - 200px);
     height: 100%;
     margin-left: 200px;
+    background-color: var(--back-color);
 }
 
 /* header */
@@ -182,6 +195,10 @@ header .button {
     overflow: auto;
 }
 
+#content .nav-content > * > * > * > *{
+    font-size: 15px;
+}
+
 #content nav {
     margin-top: 10px;
     margin-bottom: 30px;
@@ -198,6 +215,10 @@ header .button {
 
 #content nav ul li:hover{
     border-bottom: 3px solid var(--spotify-color);
+}
+
+#content nav ul li:hover a p {
+    color: white;
     font-weight: bold;
 }
 
@@ -216,11 +237,12 @@ header .button {
 
 .container-content .my-row .card{
     margin: 0 10px;
-    width: calc((100% / 6) - 20px);
+    width: calc((100% / 6) - 40px);
 }
 
 .container-content .my-row .card .img-box{
     position: relative;
+    margin-bottom: 15px;
 }
 
 .container-content .my-row .card .img-box img{
@@ -249,10 +271,15 @@ header .button {
 
 .container-content .my-row .card > * {
     text-align: center;
+    padding-top: 5px;
 }
 
 .artists > * {
     border-radius: 50%;
+}
+
+.container-content h2 {
+    padding-bottom: 5px;
 }
 
 
@@ -266,6 +293,7 @@ footer {
     position: fixed;
     bottom: 0;
     right: 0;
+    background-color: var(--bar-color);
 }
 
 .img-song {
@@ -346,42 +374,42 @@ input:hover::-webkit-slider-thumb {
 
 
 
-#wrapper {
+/* #wrapper {
     background-color:coral;
-}
+} */
 
-aside {
+/* aside {
     background-color: navy;
-}
+} */
 
 
-main {
+/* main {
     background-color: crimson;
-}
+} */
 
 /* header {
     background-color: darkslategray;
 } */
 
-#content {
+/* #content {
     background-color: darkorchid;
-}
+} */
 
-.container-content{
+/* .container-content{
     background-color: goldenrod;
-}
+} */
 
-.card{
+/* .card{
     background-color: aqua;
-}
+} */
 
-footer {
+/* footer {
     background-color: lightseagreen;
-}
+} */
 
-.my-player-bar{
+/* .my-player-bar{
     background-color: blue;
-}
+} */
 
 
 
