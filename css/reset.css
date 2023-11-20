@@ -9,7 +9,8 @@
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Fredoka', sans-serif;
+    font-family: 'Signika', sans-serif;
 }
 
 img {
@@ -24,9 +25,6 @@ ul {
 a {
     text-decoration: none;
 }
-
-
-
 
 :root {
     --bar-color: #282828;
